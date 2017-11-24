@@ -1,0 +1,17 @@
+{
+	"music": "asd",
+	"bubbles": [
+		{
+			"time": 1,
+			"x": 500,
+			"y": 400,
+			"type": "Simple"
+		},
+		{
+			"time": 2,
+			"x": 800,
+			"y": 100,
+			"type": "Simple"
+		}
+	]
+}
