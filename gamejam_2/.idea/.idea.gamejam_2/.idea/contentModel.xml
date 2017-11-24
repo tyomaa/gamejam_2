@@ -16,6 +16,9 @@
           <e p="Dance" t="Include">
             <e p="SimpleTapBubble.cs" t="Include" />
           </e>
+          <e p="Network" t="Include">
+            <e p="PlayerController.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="gamejam_2.sln" t="IncludeFlat" />
