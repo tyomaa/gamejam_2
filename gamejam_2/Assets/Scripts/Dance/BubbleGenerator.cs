@@ -18,7 +18,7 @@ public class BubbleGenerator : MonoBehaviour
             Debug.Log(bubbleData.time + " / " + bubbleData.x + "|" + bubbleData.y);
         }
 
-        _bubbles = new Stack<BubbleData>(bubbles.OrderBy(b => b.time));
+        _bubbles = new Stack<BubbleData>(bubbles.OrderByDescending(b => b.time));
         StartCoroutine(SpawnBubbles());
     }
 
@@ -28,28 +28,46 @@ public class BubbleGenerator : MonoBehaviour
         while (true)
         {
             var timeDiff = Time.time - _startTime;
+            //Debug.Log(timeDiff);
             while (_bubbles.Count > 0 && _bubbles.Peek().time <= timeDiff)
             {
                 var bubble = _bubbles.Pop();
+                Debug.Log("instantiating " + bubble.type + " at " + bubble.time);
+                var go = Instantiate(bubble);
                 switch (bubble.type)
                 {
                     case BubbleType.Simple:
                     {
-                        var prf = Resources.Load("Prefabs/Bubbles/SimpleBubble");
-                        var go = Object.Instantiate(prf) as GameObject;
-                        go.transform.SetParent(GameObject.Find("MainCanvas").transform);
-                        var rect = (go.transform as RectTransform);
-                        rect.anchoredPosition = new Vector2(bubble.x, bubble.y);
-                        rect.localScale = Vector3.one;
+                        break;
+                    }
+                    case BubbleType.Shrink:
+                    {
                         break;
                     }
                     default:
                     {
-                        throw new NotImplementedException();
+                        break;
                     }
                 }
-        }
+            }
             yield return null;
         }
+    }
+
+    private GameObject Instantiate(BubbleData bubble)
+    {
+        var prf = Resources.Load(GetPrefabName(bubble.type));
+        var go = Object.Instantiate(prf) as GameObject;
+        go.transform.SetParent(GameObject.Find("MainCanvas").transform);
+        var rect = (go.transform as RectTransform);
+        rect.transform.localPosition = Vector3.zero;
+        rect.anchoredPosition = new Vector3(bubble.x, bubble.y, 0);
+        rect.localScale = Vector3.one;
+        return go;
+    }
+
+    private string GetPrefabName(BubbleType type)
+    {
+        return string.Format("Prefabs/Bubbles/{0}Bubble", type);
     }
 }

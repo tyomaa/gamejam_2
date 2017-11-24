@@ -5,13 +5,19 @@
 			"time": 1,
 			"x": 500,
 			"y": 400,
-			"type": "Simple"
+			"type": 1
 		},
 		{
 			"time": 2,
 			"x": 800,
 			"y": 100,
-			"type": "Simple"
+			"type": 0
+		},
+		{
+			"time": 2.5,
+			"x": 100,
+			"y": 200,
+			"type": 0
 		}
 	]
 }

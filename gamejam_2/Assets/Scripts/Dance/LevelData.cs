@@ -3,7 +3,8 @@
 [Serializable]
 public enum BubbleType
 {
-    Simple
+    Simple,
+    Shrink
 }
 
 [Serializable]
