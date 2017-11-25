@@ -71,7 +71,7 @@ namespace game_jam.UI
             {
                 return _currentScreen as BattleSearchScreen;
             }
-            throw new Exception("BattleSearchScreen not exists!");
+            return null;
         }
     }
 }

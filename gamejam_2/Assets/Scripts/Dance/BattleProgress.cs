@@ -5,6 +5,11 @@ public class BattleProgress : MonoBehaviour
 {
     public Image progressImage;
 
+    private void Awake()
+    {
+        SetDiff(0);
+    }
+
     public void SetDiff(int pointDiff)
     {
         if (pointDiff == 0)

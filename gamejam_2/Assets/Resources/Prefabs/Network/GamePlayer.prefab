@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4648172611304052}
   - component: {fileID: 114525708440597116}
   - component: {fileID: 114477480714969508}
+  - component: {fileID: 114123567976793036}
   m_Layer: 0
   m_Name: GamePlayer
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114123567976793036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218393681602632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f768d4dabf3a4515884f7a380deb9b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114477480714969508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f800348c778947e8b874763a1026454b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dancerScore: {fileID: 114123567976793036}
 --- !u!114 &114525708440597116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,4 +96,4 @@ MonoBehaviour:
     i14: 50
     i15: 122
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_LocalPlayerAuthority: 0

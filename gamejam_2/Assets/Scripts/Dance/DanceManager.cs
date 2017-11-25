@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 public class DanceManager : MonoBehaviour
 {
     public Text timeText;
     public ComboCounter comboCounterItem;
-    private int _totalPoints;
     private BattleProgress bp;
     private int comboCounter = 0;
     private float _startTime;
@@ -26,7 +25,6 @@ public class DanceManager : MonoBehaviour
         _startTime = Time.time;
         bp = FindObjectOfType<BattleProgress>();
         bp.SetDiff(0);
-        _totalPoints = 0;
         comboCounterItem.SetProgress(0);
         StartCoroutine(UpdateTime());
         LoadLevel(1);
@@ -84,10 +82,7 @@ public class DanceManager : MonoBehaviour
             else
                 ft.SetText("COMBO!");
         }
-
-        _totalPoints += result.points;
-
-        bp.SetDiff(_totalPoints);
+        GamePlayer.Instance.DeltaPoints(result.points);
     }
 
     public void OnMiss()
@@ -99,5 +94,10 @@ public class DanceManager : MonoBehaviour
             successGrade = ActionSuccessGrade.Fail
         },
         Utils.ConvertInputPos(Input.mousePosition));
+    }
+
+    public void SetProgress(int progressDiff)
+    {
+        bp.SetDiff(progressDiff);
     }
 }

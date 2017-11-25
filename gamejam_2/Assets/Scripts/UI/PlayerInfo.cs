@@ -28,21 +28,24 @@ namespace game_jam.UI
 
             if (LobbyManager.Instance != null) LobbyManager.Instance.OnPlayersNumberModified(1);
 
-            GUIManager.Instance.GetSearchScreen().AddPlayer(this);
-
-            if (isLocalPlayer)
+            if (GUIManager.Instance.GetSearchScreen() != null)
             {
-                SetupLocalPlayer();
-            }
-            else
-            {
-                SetupOtherPlayer();
-            }
+                GUIManager.Instance.GetSearchScreen().AddPlayer(this);
 
-            //setup the player data on UI. The value are SyncVar so the player
-            //will be created with the right value currently on server
-            OnMyName(playerName);
-            OnMyLevel(playerLevel);
+                if (isLocalPlayer)
+                {
+                    SetupLocalPlayer();
+                }
+                else
+                {
+                    SetupOtherPlayer();
+                }
+
+                //setup the player data on UI. The value are SyncVar so the player
+                //will be created with the right value currently on server
+                OnMyName(playerName);
+                OnMyLevel(playerLevel);
+            }
         }
 
         private void OnMyLevel(string level)
