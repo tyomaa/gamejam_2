@@ -7,7 +7,8 @@ namespace game_jam.UI
     {
         CITY,
         BATTLE_SEARCH,
-        BATTLE
+        BATTLE,
+        HOME
     }
 
     public class GUIManager : MonoBehaviour
@@ -15,6 +16,7 @@ namespace game_jam.UI
         [SerializeField] private Canvas _mainCanvas;
         [SerializeField] private CityScreen _cityScreen;
         [SerializeField] private BattleSearchScreen _battleSearchScreen;
+        [SerializeField] private HomeScreen _homeScreen;
 
 
         private BaseScreen _currentScreen;
@@ -29,6 +31,9 @@ namespace game_jam.UI
                     break;
                 case ScreenType.BATTLE_SEARCH:
                     _currentScreen = Instantiate(_battleSearchScreen);
+                    break;
+                case ScreenType.HOME:
+                    _currentScreen = Instantiate(_homeScreen);
                     break;
                 case ScreenType.BATTLE:
                     break;
