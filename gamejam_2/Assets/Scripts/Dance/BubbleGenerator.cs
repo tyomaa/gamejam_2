@@ -46,6 +46,11 @@ public class BubbleGenerator : MonoBehaviour
                         go.GetComponent<ShrinkMoveBubble>().SetMoveData(new Vector2(bubble.toX, bubble.toY), bubble.moveTime);
                         break;
                     }
+                    case BubbleType.Swipe:
+                    {
+                        go.GetComponent<SwipeBubble>().SetDir(new Vector2(bubble.toX, bubble.toY));
+                        break;
+                    }
                     default:
                     {
                         break;

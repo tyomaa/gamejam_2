@@ -39,7 +39,7 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
         Die();
     }
 
-    private void Die()
+    protected void Die()
     {
         StopAllCoroutines();
         Destroy(gameObject);

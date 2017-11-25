@@ -27,7 +27,6 @@ public class ShrinkMoveBubble : BubbleBase
         while (true)
         {
             var rect = gameObject.GetRectTransform();
-            Debug.Log(Time.deltaTime);
             rect.anchoredPosition = Vector2.Lerp(
                 _startPos,
                 _destPos,

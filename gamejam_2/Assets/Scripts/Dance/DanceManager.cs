@@ -35,9 +35,8 @@ public class DanceManager : MonoBehaviour
     private IEnumerator UpdateTime()
     {
         var timePassed = 0;
-        while (timePassed <= 30.0f)
+        while ((timePassed = (int)Mathf.Floor(Time.time - _startTime)) <= 30.0f)
         {
-            timePassed = (int)Mathf.Floor(Time.time - _startTime);
             timeText.text = String.Format("0 : {0:00}", (30 - timePassed)).ToString();
             yield return null;
         }
@@ -99,13 +98,6 @@ public class DanceManager : MonoBehaviour
             points = 0,
             successGrade = ActionSuccessGrade.Fail
         },
-        ConvertInputPos());
-    }
-
-    Vector2 ConvertInputPos()
-    {
-        return new Vector2(
-            Input.mousePosition.x * (1280.0f / Screen.width),
-            Input.mousePosition.y * (800.0f / Screen.height));
+        Utils.ConvertInputPos(Input.mousePosition));
     }
 }

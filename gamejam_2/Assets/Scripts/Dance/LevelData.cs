@@ -6,7 +6,8 @@ public enum BubbleType
     Simple,
     Shrink,
     SimpleMove,
-    ShrinkMove
+    ShrinkMove,
+    Swipe
 }
 
 [Serializable]
