@@ -13,8 +13,6 @@ public class FlyingText : MonoBehaviour
 
     private float _startTime;
 
-    private static RectTransform mainCanvas;
-
     void Start()
 	{
 	    _startTime = Time.time;
@@ -61,14 +59,9 @@ public class FlyingText : MonoBehaviour
 
     public static FlyingText Spawn(Vector2 pos, float delay = 0)
     {
-        if (mainCanvas == null)
-        {
-            mainCanvas = GameObject.Find("MainCanvas").GetRectTransform();
-        }
-
         var prf = Resources.Load("Prefabs/FlyingText");
         var go = Instantiate(prf) as GameObject;
-        go.transform.SetParent(mainCanvas);
+        go.transform.SetParent(DanceManager.Instance.MainCanvas);
         go.transform.localPosition = Vector3.zero;
         go.transform.localRotation = Quaternion.identity;
         go.transform.localScale = Vector3.one;

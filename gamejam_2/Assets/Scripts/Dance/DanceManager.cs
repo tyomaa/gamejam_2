@@ -15,6 +15,19 @@ public class DanceManager : MonoBehaviour
 
     public static DanceManager Instance;
 
+    private RectTransform mainCanvas;
+    public RectTransform MainCanvas
+    {
+        get
+        {
+            if (mainCanvas == null)
+            {
+                mainCanvas = GameObject.Find("MainCanvas").GetRectTransform();
+            }
+            return mainCanvas;
+        }
+    }
+
     void Awake()
     {
         Instance = this;

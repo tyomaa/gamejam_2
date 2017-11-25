@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4857553298754274}
   - component: {fileID: 198591536977320778}
   - component: {fileID: 199313917809779980}
-  m_Layer: 0
+  - component: {fileID: 114169774216043178}
+  m_Layer: 5
   m_Name: TapEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,12 +36,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1093232513485372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.094864, y: 13.659018, z: -13.681956}
+  m_LocalPosition: {x: 0, y: 0, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114169774216043178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093232513485372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4352b3efbb24481498f1db92a67d2f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimer: 0.5
 --- !u!198 &198591536977320778
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -101,7 +114,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 553340673
+  randomSeed: -40396704
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -194,7 +207,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 0, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 1, a: 1}
+        key0: {r: 1, g: 0, b: 0.8068967, a: 1}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -566,7 +579,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 5.106609
+      value: 9.01
       mode: 0
       spread: 0
       speed:
@@ -3396,7 +3409,7 @@ ParticleSystemRenderer:
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
-  m_MinParticleSize: 0
+  m_MinParticleSize: 0.008
   m_MaxParticleSize: 0.5
   m_CameraVelocityScale: 0
   m_VelocityScale: 0

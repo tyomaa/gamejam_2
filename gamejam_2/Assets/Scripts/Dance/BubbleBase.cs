@@ -42,6 +42,12 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
     protected void Die()
     {
         StopAllCoroutines();
+        var o = Resources.Load("Prefabs/Chars/TapEffect");
+        var go = Instantiate(o) as GameObject;
+        go.transform.SetParent(DanceManager.Instance.MainCanvas);
+        go.transform.localScale = Vector3.one;
+        var pos = gameObject.GetRectTransform().anchoredPosition;
+        go.transform.localPosition = new Vector3(pos.x - 1280 / 2, pos.y - 800 /2, -10);
         Destroy(gameObject);
     }
 
