@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -95,11 +96,22 @@ public class DanceManager : MonoBehaviour
             else
                 ft.SetText("COMBO!");
         }
-        if (GamePlayer.Instance != null)
+        var infos = GameObject.FindObjectsOfType<GamePlayer>();
+        //Debug.Log(infos.Length);
+        foreach (var i in infos)
         {
-             GamePlayer.Instance.DeltaPoints(result.points);
+//            if (i.isLocalPlayer)
+            {
+                Debug.Log("adding " + result.points);
+//                i.score = i.score + result.points;
+                i.ChangeScore(result.points);
+            }
         }
-       
+//        if (GamePlayer.Instance != null)
+//        {
+//             GamePlayer.Instance.DeltaPoints(result.points);
+//        }
+//       
     }
 
     public void OnMiss()
@@ -116,5 +128,18 @@ public class DanceManager : MonoBehaviour
     public void SetProgress(int progressDiff)
     {
         bp.SetDiff(progressDiff);
+    }
+
+    public void Update()
+    {
+        var infos = GameObject.FindObjectsOfType<GamePlayer>();
+        var myInfo = infos.FirstOrDefault(i => i.isLocalPlayer);
+        var otherInfo = infos.FirstOrDefault(i => !i.isLocalPlayer);
+        if (bp != null)
+        {
+            bp.SetDiff(
+                (myInfo == null ? 0 : myInfo.score) -
+                (otherInfo == null ? 0 : otherInfo.score));
+        }
     }
 }

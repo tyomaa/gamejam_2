@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f800348c778947e8b874763a1026454b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dancerScore: {fileID: 114123567976793036}
+  _score: 0
 --- !u!114 &114525708440597116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,4 +96,4 @@ MonoBehaviour:
     i14: 50
     i15: 122
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1

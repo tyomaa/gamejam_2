@@ -11,7 +11,7 @@ namespace game_jam.UI
         [SerializeField] private RectTransform _searchInProgress;
         [SerializeField] private RectTransform _cancelButton;
 
-        private List<PlayerInfo> _players = new List<PlayerInfo>{};
+        private List<LobbyPlayer> _players = new List<LobbyPlayer>{};
 
         private bool _started;
         private bool _host;
@@ -40,7 +40,7 @@ namespace game_jam.UI
         }
 
 
-        public void AddPlayer(PlayerInfo info)
+        public void AddPlayer(LobbyPlayer info)
         {
             if (_players.Count == 0)
             {
@@ -59,16 +59,16 @@ namespace game_jam.UI
                 {
                     if (player.isLocalPlayer)
                     {
-                        LobbyManager.Instance.ServerChangeScene(LobbyManager.Instance.playScene);
+//                        LobbyManager.Instance.ServerChangeScene(LobbyManager.Instance.playScene);
                     }
                 }
             }
         }
 
-        private void InitPlayer(PlayerInfo playerInfo, PlayerInfo info)
+        private void InitPlayer(PlayerInfo playerInfo, LobbyPlayer info)
         {
             playerInfo.gameObject.SetActive(true);
-            playerInfo.Init(info.playerName, info.playerLevel);
+            playerInfo.Init(info.playerName, info.playerLevel, info);
         }
 
         public int GetPlayersCount()

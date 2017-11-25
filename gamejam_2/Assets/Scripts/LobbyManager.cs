@@ -7,8 +7,6 @@ namespace DefaultNamespace
         private static LobbyManager _instance;
         private int _playerNumber = 0;
         
-        
-
         public static LobbyManager Instance
         {
             get { return _instance; }

@@ -5,27 +5,41 @@ namespace DefaultNamespace
 {
     public class GamePlayer : NetworkBehaviour
     {
-        private static GamePlayer _instance;
+        public int score = 0;
 
-        [SerializeField] private DancerScore _dancerScore;
-        
-        
-        public static GamePlayer Instance
+        public override void OnStartClient()
         {
-            get { return _instance; }
+            Debug.Log("OnStartClient");
+            base.OnStartClient();
+            score = 0;
         }
-        private void Awake()
-        {
-            _instance = this;
-        }
-        
 
-        public void DeltaPoints(int delta)
+        public void OnScoreChanged(int value)
         {
-            _dancerScore.DeltaPoints(delta);
-            
+            Debug.Log("OnScoreChanged " + value);
+//            DanceManager.Instance.Update();
+        }
+
+        public void ChangeScore(int resultPoints)
+        {
+            if (!isLocalPlayer)
+                return;
+
+            score += resultPoints;
+            CmdChangePoints(score);
+            RpcChangePoints(resultPoints);
+        }
+
+        [Command]
+        private void CmdChangePoints(int resultPoints)
+        {
+            score = resultPoints;
+        }
+
+        [ClientRpc]
+        private void RpcChangePoints(int resultPoints)
+        {
+            score += resultPoints;
         }
     }
-    
-    
 }
