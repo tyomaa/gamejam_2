@@ -613,7 +613,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1098446805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9baf7b6fd52e1ce49adb53f095e657c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e4234f37d54b3747a1c24550cc247a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   progress: {fileID: 607316180}
@@ -1249,9 +1249,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783579050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711e9189fc1c23f4691a68a0e251fa64, type: 3}
+  m_Script: {fileID: 11500000, guid: 18208b09418cbbb45972c8937747ce80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progressImage: {fileID: 378724389}
 --- !u!114 &1783579053
 MonoBehaviour:
   m_ObjectHideFlags: 0
