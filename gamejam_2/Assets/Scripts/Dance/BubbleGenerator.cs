@@ -36,12 +36,14 @@ public class BubbleGenerator : MonoBehaviour
                 var go = Instantiate(bubble);
                 switch (bubble.type)
                 {
-                    case BubbleType.Simple:
+                    case BubbleType.SimpleMove:
                     {
+                        go.GetComponent<SimpleMoveBubble>().SetMoveData(new Vector2(bubble.toX, bubble.toY), bubble.moveTime);
                         break;
                     }
-                    case BubbleType.Shrink:
+                    case BubbleType.ShrinkMove:
                     {
+                        go.GetComponent<ShrinkMoveBubble>().SetMoveData(new Vector2(bubble.toX, bubble.toY), bubble.moveTime);
                         break;
                     }
                     default:

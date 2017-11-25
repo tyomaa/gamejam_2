@@ -4,7 +4,9 @@
 public enum BubbleType
 {
     Simple,
-    Shrink
+    Shrink,
+    SimpleMove,
+    ShrinkMove
 }
 
 [Serializable]
@@ -14,6 +16,9 @@ public class BubbleData
     public float x;
     public float y;
     public BubbleType type;
+    public float toX;
+    public float toY;
+    public float moveTime;
 }
 
 [Serializable]

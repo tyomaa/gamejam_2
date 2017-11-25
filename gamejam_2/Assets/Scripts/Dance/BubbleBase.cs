@@ -7,7 +7,7 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
     private IBubbleTapBehaviourStrategy _tapBehaviour;
 
     private float _timeToDie = 2.0f;
-    private float _startTime;
+    protected float _startTime;
 
     protected abstract IBubbleTapBehaviourStrategy CreateTapBehaviour();
 
