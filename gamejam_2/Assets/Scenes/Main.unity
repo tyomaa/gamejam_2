@@ -379,7 +379,8 @@ MonoBehaviour:
     type: 2}
   _battleSearchScreen: {fileID: 114351969984820094, guid: 867af72abe1e9d648b9a3c2adbf7aff1,
     type: 2}
-  _homeScreen: {fileID: 0}
+  _homeScreen: {fileID: 114714768478309754, guid: b77b276925d9dd642b230fc5a1f85cb6,
+    type: 2}
 --- !u!4 &1236458149
 Transform:
   m_ObjectHideFlags: 0
