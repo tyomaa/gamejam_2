@@ -3,7 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class DanceManager : MonoBehaviour
 {
-	void Start()
+    public static DanceManager Instance;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+    void Start()
 	{
 	    LoadLevel(1);
 	}
@@ -19,5 +26,10 @@ public class DanceManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene("dance");
+    }
+
+    public void HandleAction(ActionResult result)
+    {
+
     }
 }

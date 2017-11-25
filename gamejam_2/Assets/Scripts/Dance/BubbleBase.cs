@@ -4,9 +4,13 @@ using UnityEngine.EventSystems;
 
 public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
 {
+    private IBubbleTapBehaviourStrategy _tapBehaviour;
+
+    private float _timeToDie = 2.0f;
+    private float _startTime;
+
     protected abstract IBubbleTapBehaviourStrategy CreateTapBehaviour();
 
-    private IBubbleTapBehaviourStrategy _tapBehaviour;
     protected IBubbleTapBehaviourStrategy TapBehaviour
     {
         get
@@ -17,9 +21,6 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
         }
     }
 
-    private float _timeToDie = 2.0f;
-    private float _startTime;
-
     public virtual void Start()
     {
         _startTime = Time.time;
@@ -29,6 +30,11 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
     private IEnumerator DieRoutined()
     {
         yield return new WaitForSeconds(_timeToDie);
+        DanceManager.Instance.HandleAction(new ActionResult
+        {
+            successGrade = ActionSuccessGrade.Fail,
+            points = 0
+        });
         Die();
     }
 
@@ -49,8 +55,9 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
         go.transform.SetParent(transform.parent);
 
         var diff = Mathf.Abs(Time.time - _startTime);
-        var points = TapBehaviour.HandleTap(diff);
-        go.GetComponent<FlyingText>().SetText("+" + points);
+        var res = TapBehaviour.HandleAction(diff);
+        go.GetComponent<FlyingText>().SetText("+" + res.points);
+        DanceManager.Instance.HandleAction(res);
         Die();
     }
 }

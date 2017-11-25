@@ -3,30 +3,44 @@ using UnityEngine;
 
 public class QuickTapStrategy : IBubbleTapBehaviourStrategy
 {
-    public int HandleTap(float timePassed)
+    public ActionResult HandleAction(float timePassed)
     {
-        var basePoints = 100;
-        var points = basePoints;
         if (timePassed < 0.2f)
         {
-            points = (int)(basePoints * 1.5f);
             Debug.LogError("PERFECT!!! " + timePassed);
+            return new ActionResult
+            {
+                successGrade = ActionSuccessGrade.Perfect,
+                points = 150
+            };
         }
         else if (timePassed < 0.5f)
         {
             Debug.LogWarning("GOOD!! " + timePassed);
+            return new ActionResult
+            {
+                successGrade = ActionSuccessGrade.Good,
+                points = 100
+            };
         }
         else if (timePassed < 0.8f)
         {
-            points = (int)(basePoints * 0.5f);
             Debug.LogWarning("NICE " + timePassed);
+            return new ActionResult
+            {
+                successGrade = ActionSuccessGrade.Ok,
+                points = 50
+            };
         }
         else
         {
-            points = 0;
             Debug.Log("OOPS!!! " + timePassed);
+            return new ActionResult
+            {
+                successGrade = ActionSuccessGrade.Bad,
+                points = 10
+            };
         }
-        return points;
     }
 }
 

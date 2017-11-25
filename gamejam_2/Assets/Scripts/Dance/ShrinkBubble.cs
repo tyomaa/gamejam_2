@@ -9,33 +9,46 @@ public class TimedTapStrategy : IBubbleTapBehaviourStrategy
         _timeToTap = timeToTap;
     }
 
-    public int HandleTap(float timePassed)
+    public ActionResult HandleAction(float timePassed)
     {
-        var basePoints = 200;
-        var points = basePoints;
-
         var d = timePassed - _timeToTap;
         var diff = Mathf.Abs(d);
         if (diff < 0.1f)
         {
             Debug.LogError("PERFECT!!! " + d);
-            points = (int)(basePoints * 1.2f);
+            return new ActionResult()
+            {
+                successGrade = ActionSuccessGrade.Perfect,
+                points = 200
+            };
         }
         else if (diff < 0.3f)
         {
             Debug.LogWarning("GOOD!! " + d);
+            return new ActionResult()
+            {
+                successGrade = ActionSuccessGrade.Good,
+                points = 100
+            };
         }
         else if (diff < 0.5f)
         {
             Debug.LogWarning("NICE " + d);
-            points = (int)(basePoints * 0.5f);
+            return new ActionResult()
+            {
+                successGrade = ActionSuccessGrade.Ok,
+                points = 50
+            };
         }
         else
         {
             Debug.Log("OOPS!!!" + d);
-            points = 0;
+            return new ActionResult()
+            {
+                successGrade = ActionSuccessGrade.Bad,
+                points = 10
+            };
         }
-        return points;
     }
 }
 
