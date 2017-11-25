@@ -8,7 +8,7 @@ namespace game_jam.UI
 
         public void OnHomeClick()
         {
-            Debug.Log("Click Home!");
+            Main.Instance.GetGuiManager().ShowScreen<HomeScreen>(ScreenType.HOME);
         }
 
         public void OnShopClick()
