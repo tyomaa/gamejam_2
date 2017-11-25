@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 06bd541270410e745beecf72b0af234f
-timeCreated: 1511617032
+guid: 24d94ddadb9931342bc98d557a96c1e5
+timeCreated: 1511618304
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
@@ -10,9 +10,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Courier-Bold
+  fontName: Monster Friend Fore (RUS BY LYA
   fontNames:
-  - Courier-Bold
+  - Monster Friend Fore (RUS BY LYA
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

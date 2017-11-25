@@ -45,7 +45,7 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
         Destroy(gameObject);
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)
     {
         var diff = Mathf.Abs(Time.time - _startTime);
         var res = TapBehaviour.HandleAction(diff);

@@ -38,10 +38,10 @@ public class DanceManager : MonoBehaviour
         while (timePassed <= 30.0f)
         {
             timePassed = (int)Mathf.Floor(Time.time - _startTime);
-            timeText.text = String.Format("0:{0:00}", (30 - timePassed)).ToString();
+            timeText.text = String.Format("0 : {0:00}", (30 - timePassed)).ToString();
             yield return null;
         }
-        timeText.text = "0:00";
+        timeText.text = "0 : 00";
     }
 
     private void LoadLevel(int level)
