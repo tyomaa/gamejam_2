@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\anim.cs" />
+    <Compile Include="Assets\DestroyAfter.cs" />
     <Compile Include="Assets\Scripts\Dance\BattleProgress.cs" />
     <Compile Include="Assets\Scripts\Dance\BubbleBase.cs" />
     <Compile Include="Assets\Scripts\Dance\BubbleGenerator.cs" />
@@ -65,6 +66,8 @@
     <Compile Include="Assets\Scripts\Dance\ShrinkMoveBubble.cs" />
     <Compile Include="Assets\Scripts\Dance\SimpleBubble.cs" />
     <Compile Include="Assets\Scripts\Dance\SimpleMoveBubble.cs" />
+    <Compile Include="Assets\Scripts\Dance\SwipeBubble.cs" />
+    <Compile Include="Assets\Scripts\DancerScore.cs" />
     <Compile Include="Assets\Scripts\FlyingText.cs" />
     <Compile Include="Assets\Scripts\GamePlayer.cs" />
     <Compile Include="Assets\Scripts\LobbyManager.cs" />
