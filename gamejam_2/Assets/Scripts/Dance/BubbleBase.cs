@@ -30,11 +30,12 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
     private IEnumerator DieRoutined()
     {
         yield return new WaitForSeconds(_timeToDie);
-        DanceManager.Instance.HandleAction(new ActionResult
+        DanceManager.Instance.ProcessAction(new ActionResult
         {
             successGrade = ActionSuccessGrade.Fail,
             points = 0
-        });
+        },
+        gameObject.GetRectTransform().anchoredPosition);
         Die();
     }
 
@@ -46,18 +47,9 @@ public abstract class BubbleBase : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        var prf = Resources.Load("Prefabs/FlyingText");
-        var go = Instantiate(prf) as GameObject;
-        go.transform.SetParent(transform);
-        go.transform.localPosition = Vector3.zero;
-        go.transform.localRotation = Quaternion.identity;
-        go.transform.localScale = Vector3.one;
-        go.transform.SetParent(transform.parent);
-
         var diff = Mathf.Abs(Time.time - _startTime);
         var res = TapBehaviour.HandleAction(diff);
-        go.GetComponent<FlyingText>().SetText("+" + res.points);
-        DanceManager.Instance.HandleAction(res);
+        DanceManager.Instance.ProcessAction(res, gameObject.GetRectTransform().anchoredPosition);
         Die();
     }
 }
