@@ -95,7 +95,11 @@ public class DanceManager : MonoBehaviour
             else
                 ft.SetText("COMBO!");
         }
-        GamePlayer.Instance.DeltaPoints(result.points);
+        if (GamePlayer.Instance != null)
+        {
+             GamePlayer.Instance.DeltaPoints(result.points);
+        }
+       
     }
 
     public void OnMiss()
