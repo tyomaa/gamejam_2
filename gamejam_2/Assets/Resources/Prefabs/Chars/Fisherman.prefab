@@ -364,13 +364,11 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: db64d673e56148c4d9398f399bd5d37b, type: 2}
   m_Animations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 7400000, guid: db64d673e56148c4d9398f399bd5d37b, type: 2}
   - {fileID: 7400000, guid: 127bd281f8387594c8735a403ebc1748, type: 2}
+  - {fileID: 7400000, guid: 8196181d3416ec54a9bee6a6d8aea039, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
