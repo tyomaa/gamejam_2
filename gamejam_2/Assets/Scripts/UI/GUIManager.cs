@@ -18,6 +18,14 @@ namespace game_jam.UI
         [SerializeField] private BattleSearchScreen _battleSearchScreen;
         [SerializeField] private HomeScreen _homeScreen;
 
+        private static GUIManager _instance;
+
+
+        private void Awake()
+        {
+            _instance = this;
+            ShowScreen<CityScreen>(ScreenType.CITY).Init(1);
+        }
 
         private BaseScreen _currentScreen;
 
@@ -50,6 +58,20 @@ namespace game_jam.UI
             {
                 _currentScreen.Hide();
             }
+        }
+
+        public static GUIManager Instance
+        {
+            get { return _instance; }
+        }
+
+        public BattleSearchScreen GetSearchScreen()
+        {
+            if (_currentScreen != null && _currentScreen is BattleSearchScreen)
+            {
+                return _currentScreen as BattleSearchScreen;
+            }
+            throw new Exception("BattleSearchScreen not exists!");
         }
     }
 }

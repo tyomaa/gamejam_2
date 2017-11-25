@@ -8,7 +8,7 @@ namespace game_jam.UI
 
         public void OnHomeClick()
         {
-            Main.Instance.GetGuiManager().ShowScreen<HomeScreen>(ScreenType.HOME);
+           GUIManager.Instance.ShowScreen<HomeScreen>(ScreenType.HOME);
         }
 
         public void OnShopClick()
@@ -19,7 +19,7 @@ namespace game_jam.UI
 
         public void OnDanceArenaClick()
         {
-            Main.Instance.GetGuiManager().ShowScreen<BattleSearchScreen>(ScreenType.BATTLE_SEARCH);
+            GUIManager.Instance.ShowScreen<BattleSearchScreen>(ScreenType.BATTLE_SEARCH);
         }
 
         public void OnNextCityClick()
@@ -29,10 +29,10 @@ namespace game_jam.UI
         
         public void Init(int cityId)
         {
-            foreach (var point in _pvePoints)
+            /*foreach (var point in _pvePoints)
             {
                 point.Init(OnPveClick);
-            }
+            }*/
         }
 
         public void OnPveClick(int pveId)

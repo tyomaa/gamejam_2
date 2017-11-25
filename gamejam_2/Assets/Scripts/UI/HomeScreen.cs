@@ -7,7 +7,7 @@ namespace game_jam.UI
         
         public void OnExitHomeClick()
         {
-            Main.Instance.GetGuiManager().ShowScreen<CityScreen>(ScreenType.CITY);
+            GUIManager.Instance.ShowScreen<CityScreen>(ScreenType.CITY);
         }
         
     }
