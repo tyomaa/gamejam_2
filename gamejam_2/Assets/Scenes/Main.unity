@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainCanvas: {fileID: 1084664940}
-  _cityScreen: {fileID: 114713908783164484, guid: 61a60beb862d82841a44d5c818e1c9fc,
+  _cityScreen: {fileID: 114923221677624908, guid: 61a60beb862d82841a44d5c818e1c9fc,
     type: 2}
   _battleSearchScreen: {fileID: 114351969984820094, guid: 867af72abe1e9d648b9a3c2adbf7aff1,
     type: 2}
@@ -417,7 +417,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503371110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -822479833, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 47f9c2fd306a47e3ad59566d6bb06a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
-  m_LogLevel: 2
+  m_LogLevel: 0
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
     m_MaxTimerTimeout: 12000
     m_MinNetSimulatorTimeout: 1
     m_MaxNetSimulatorTimeout: 12000
-  m_Channels: 
+  m_Channels: 0500000000000000
   m_UseWebSockets: 0
   m_UseSimulator: 0
   m_SimulatedLatency: 1
@@ -515,8 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainCanvas: {fileID: 1084664940}
-  _manager: {fileID: 1503371111}
+  _networkHelper: {fileID: 1503371111}
   _guiManager: {fileID: 1236458148}
+  _isServer: 0
 --- !u!1 &1590042551
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ namespace game_jam.UI
 {
     public class CityScreen : BaseScreen
     {
-        [SerializeField] private RectTransform _background;
         [SerializeField] private PvePoint[] _pvePoints;
 
         public void OnHomeClick()
