@@ -5,7 +5,7 @@ public class QuickTapStrategy : IBubbleTapBehaviourStrategy
 {
     public ActionResult HandleAction(float timePassed)
     {
-        if (timePassed < 0.2f)
+        if (timePassed < 0.4f)
         {
             Debug.LogError("PERFECT!!! " + timePassed);
             return new ActionResult
@@ -14,7 +14,7 @@ public class QuickTapStrategy : IBubbleTapBehaviourStrategy
                 points = 150
             };
         }
-        else if (timePassed < 0.5f)
+        else if (timePassed < 0.7f)
         {
             Debug.LogWarning("GOOD!! " + timePassed);
             return new ActionResult
@@ -23,7 +23,7 @@ public class QuickTapStrategy : IBubbleTapBehaviourStrategy
                 points = 100
             };
         }
-        else if (timePassed < 0.8f)
+        else if (timePassed < 1f)
         {
             Debug.LogWarning("NICE " + timePassed);
             return new ActionResult

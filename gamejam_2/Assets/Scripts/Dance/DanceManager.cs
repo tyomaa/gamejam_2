@@ -17,6 +17,7 @@ public class DanceManager : MonoBehaviour
     private int comboCounter = 0;
     private float _startTime;
     private float roundTime = 60.0f;
+    public Image comboImage;
 
     public static DanceManager Instance;
 
@@ -143,6 +144,8 @@ public class DanceManager : MonoBehaviour
         if (result.successGrade < ActionSuccessGrade.Good)
         {
             comboCounter = 0;
+            comboImage.gameObject.SetActive(false);
+            comboCounterItem.GetComponent<Animation>().enabled = false;
         }
         else
         {
@@ -152,6 +155,8 @@ public class DanceManager : MonoBehaviour
 
         if (comboCounter >= 3)
         {
+            comboImage.gameObject.SetActive(true);
+            comboCounterItem.GetComponent<Animation>().enabled = true;
             result.points = (int)(result.points * 2f) + (comboCounter - 3) * 20;
             FlyingText ft = FlyingText.Spawn(pos, delay);
             if (comboCounter > 3)
