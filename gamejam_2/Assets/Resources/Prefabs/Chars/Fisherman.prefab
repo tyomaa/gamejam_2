@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259253532111344}
   - component: {fileID: 212670746198211104}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4648633117427216}
   - component: {fileID: 212287762335121620}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_leg_left_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4840303904950592}
   - component: {fileID: 212968840096825036}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_arm_left_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4710071877053348}
   - component: {fileID: 212206434295756840}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_arm_left_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4333054999727232}
   - component: {fileID: 212487881534058560}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_arm_right_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4869467407005208}
   - component: {fileID: 212386130363451216}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_arm_right_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,9 +114,10 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 224456158089079906}
-  - component: {fileID: 111274680693274122}
-  m_Layer: 5
+  - component: {fileID: 4129428546427392}
+  - component: {fileID: 95767377796596136}
+  - component: {fileID: 114065228827849478}
+  m_Layer: 4
   m_Name: Fisherman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4279053725952400}
   - component: {fileID: 212087204377667108}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_leg_right_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4285487178328408}
   - component: {fileID: 212101885855480040}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_flipper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4305210039861350}
   - component: {fileID: 212627842565222642}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_leg_right_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4289744725681398}
   - component: {fileID: 212030913568751454}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_leg_left_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,13 +197,29 @@ GameObject:
   m_Component:
   - component: {fileID: 4793692371268766}
   - component: {fileID: 212511734633998910}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fisherman_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4129428546427392
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502673606558448}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 378.75, y: 166.2, z: 0}
+  m_LocalScale: {x: 0.125, y: 0.125, z: 1}
+  m_Children:
+  - {fileID: 4259253532111344}
+  - {fileID: 4648633117427216}
+  - {fileID: 4305210039861350}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4259253532111344
 Transform:
   m_ObjectHideFlags: 1
@@ -216,9 +233,9 @@ Transform:
   - {fileID: 4710071877053348}
   - {fileID: 4333054999727232}
   - {fileID: 4793692371268766}
-  m_Father: {fileID: 224456158089079906}
+  m_Father: {fileID: 4129428546427392}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.549963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.1062963}
 --- !u!4 &4279053725952400
 Transform:
   m_ObjectHideFlags: 1
@@ -269,7 +286,7 @@ Transform:
   m_LocalScale: {x: 53, y: 53, z: 0.2661}
   m_Children:
   - {fileID: 4279053725952400}
-  m_Father: {fileID: 224456158089079906}
+  m_Father: {fileID: 4129428546427392}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: -0.109000005}
 --- !u!4 &4333054999727232
@@ -285,7 +302,7 @@ Transform:
   - {fileID: 4869467407005208}
   m_Father: {fileID: 4259253532111344}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: -34.902744}
+  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: -29.070965}
 --- !u!4 &4648633117427216
 Transform:
   m_ObjectHideFlags: 1
@@ -297,7 +314,7 @@ Transform:
   m_LocalScale: {x: 53, y: 53, z: 0.2661}
   m_Children:
   - {fileID: 4289744725681398}
-  m_Father: {fileID: 224456158089079906}
+  m_Father: {fileID: 4129428546427392}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.109000005}
 --- !u!4 &4710071877053348
@@ -313,7 +330,7 @@ Transform:
   - {fileID: 4840303904950592}
   m_Father: {fileID: 4259253532111344}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.8124077}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.3351283}
 --- !u!4 &4793692371268766
 Transform:
   m_ObjectHideFlags: 1
@@ -327,7 +344,7 @@ Transform:
   - {fileID: 4285487178328408}
   m_Father: {fileID: 4259253532111344}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.7690377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.9652808}
 --- !u!4 &4840303904950592
 Transform:
   m_ObjectHideFlags: 1
@@ -340,7 +357,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4710071877053348}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.697656}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.8812034}
 --- !u!4 &4869467407005208
 Transform:
   m_ObjectHideFlags: 1
@@ -353,26 +370,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4333054999727232}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6.2064075}
---- !u!111 &111274680693274122
-Animation:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.1708245}
+--- !u!95 &95767377796596136
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502673606558448}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: db64d673e56148c4d9398f399bd5d37b, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: db64d673e56148c4d9398f399bd5d37b, type: 2}
-  - {fileID: 7400000, guid: 127bd281f8387594c8735a403ebc1748, type: 2}
-  - {fileID: 7400000, guid: 8196181d3416ec54a9bee6a6d8aea039, type: 2}
-  - {fileID: 7400000, guid: 127bd281f8387594c8735a403ebc1748, type: 2}
-  - {fileID: 7400000, guid: 8196181d3416ec54a9bee6a6d8aea039, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d218293cbb5431148932f852b64f4ece, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114065228827849478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502673606558448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30169871eacb47a89497f2105973e57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 95767377796596136}
 --- !u!212 &212030913568751454
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -857,24 +884,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!224 &224456158089079906
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502673606558448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4259253532111344}
-  - {fileID: 4648633117427216}
-  - {fileID: 4305210039861350}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Event\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_gamejam_2.1126889004.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Event\gamejam_2\gamejam_2" t="IncludeRecursive">
+    <e p="C:\projects\nord_2\gamejam_2\gamejam_2" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -17,6 +16,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Dance" t="Include">
+            <e p="Animations" t="Include">
+              <e p="AnimationContainer.cs" t="Include" />
+              <e p="DancerAnimation.cs" t="Include" />
+            </e>
             <e p="BattleProgress.cs" t="Include" />
             <e p="BubbleBase.cs" t="Include" />
             <e p="BubbleGenerator.cs" t="Include" />
@@ -31,6 +34,7 @@
             <e p="SimpleMoveBubble.cs" t="Include" />
             <e p="SwipeBubble.cs" t="Include" />
           </e>
+          <e p="DancerScore.cs" t="Include" />
           <e p="FlyingText.cs" t="Include" />
           <e p="GamePlayer.cs" t="Include" />
           <e p="LobbyManager.cs" t="Include" />
@@ -56,5 +60,6 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
+    <e p="C:\Users\user\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_gamejam_2.1461127982.00" t="ExcludeRecursive" />
   </component>
 </project>

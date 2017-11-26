@@ -1,8 +1,9 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections;
 using System.Linq;
 using DefaultNamespace;
-using UnityEngine;
+ using DefaultNamespace.Dance.Animations;
+ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class DanceManager : MonoBehaviour
 {
     public Text timeText;
     public ComboCounter comboCounterItem;
+    public AnimationContainer _animations;
     private BattleProgress bp;
     private int comboCounter = 0;
     private float _startTime;
@@ -43,7 +45,7 @@ public class DanceManager : MonoBehaviour
         comboCounterItem.SetProgress(0);
         StartCoroutine(UpdateTime());
         LoadLevel(1);
-	}
+    }
 
     private IEnumerator UpdateTime()
     {
@@ -142,17 +144,26 @@ public class DanceManager : MonoBehaviour
         {
             i.ChangeScore(result.points);
         }
+//        if (GamePlayer.Instance != null)
+//        {
+//             GamePlayer.Instance.DeltaPoints(result.points);
+//        }
+//       
+        if (result.successGrade != ActionSuccessGrade.Fail)
+        {
+            _animations.MySuccessAnimation();
+        }
     }
 
     public void OnMiss()
     {
-        Debug.LogError(Input.mousePosition);
         ProcessAction(new ActionResult
         {
             points = 0,
             successGrade = ActionSuccessGrade.Fail
         },
         Utils.ConvertInputPos(Input.mousePosition));
+        _animations.MyFailAnimation();
     }
 
     public void SetProgress(int progressDiff)
