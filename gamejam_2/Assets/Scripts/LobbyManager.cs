@@ -16,6 +16,16 @@ namespace DefaultNamespace
         private void Awake()
         {
             _instance = this;
+
+            var ipString = PlayerPrefs.GetString("ip", string.Empty);
+            if (!string.IsNullOrEmpty(ipString))
+            {
+                this.networkAddress = ipString;
+            }
+            else
+            {
+                this.networkAddress = "localhost";
+            }
         }
 
         //allow to handle the (+) button to add/remove player
@@ -46,6 +56,8 @@ namespace DefaultNamespace
         public void SetIpAdress(string value)
         {
             networkAddress = value;
+            PlayerPrefs.SetString("ip", value);
+            PlayerPrefs.Save();
         }
     }
 }
