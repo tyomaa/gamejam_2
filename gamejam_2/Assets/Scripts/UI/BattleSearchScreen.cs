@@ -65,6 +65,7 @@ namespace game_jam.UI
             if (_players.Count == 2)
             {
                 _searchInProgress.gameObject.SetActive(false);
+                _enemyInfo.gameObject.SetActive(true);
                 foreach (var player in _players)
                 {
                     if (player.isLocalPlayer)
