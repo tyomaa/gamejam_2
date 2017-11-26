@@ -204,7 +204,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 104167458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -374, y: 313, z: 0}
+  m_LocalPosition: {x: -369, y: 313, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1638777976}
@@ -212,10 +212,10 @@ RectTransform:
   m_Father: {fileID: 464366477}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -374, y: 313}
-  m_SizeDelta: {x: 1058, y: 338}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 271, y: -87}
+  m_SizeDelta: {x: 1078, y: 338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104167460
 MonoBehaviour:
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &455322781
 MonoBehaviour:
@@ -406,7 +406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Chicanos
+  m_Text: Chickanus
 --- !u!222 &455322782
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 2, y: -2}
+  m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &520929033
 MonoBehaviour:
@@ -532,7 +532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fishdranos
+  m_Text: Fishdranus
 --- !u!222 &520929034
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1568,16 +1568,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1388750655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -393, y: 32.65, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: -376, y: 11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1620919985}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393, y: 32.65}
-  m_SizeDelta: {x: 274.1, y: 272.7}
+  m_AnchoredPosition: {x: -376, y: 11}
+  m_SizeDelta: {x: 301, y: 316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388750657
 MonoBehaviour:
@@ -1598,7 +1598,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c7113863536870f4cb9b15068883d330, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aae239a3e4cc1ed46a86fbd60b963808, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1988,7 +1988,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620919984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 371, y: 313, z: 0}
+  m_LocalPosition: {x: 367.7, y: 313, z: 0}
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1388750656}
@@ -1996,10 +1996,10 @@ RectTransform:
   m_Father: {fileID: 464366477}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 371, y: 313}
-  m_SizeDelta: {x: 1058, y: 338}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -272.3, y: -87}
+  m_SizeDelta: {x: 1071.4, y: 338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1620919986
 MonoBehaviour:
