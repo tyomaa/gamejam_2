@@ -17,6 +17,15 @@ namespace game_jam.UI
         private bool _started;
         private bool _host;
 
+        void Awake()
+        {
+            var str = PlayerPrefs.GetString("ip");
+            if (!string.IsNullOrEmpty(str))
+            {
+                _ipAdressInputField.text = str;
+            }
+        }
+
         public void OnCancelClick()
         {
 
