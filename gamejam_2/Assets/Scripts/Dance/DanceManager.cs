@@ -16,6 +16,7 @@ public class DanceManager : MonoBehaviour
     private BattleProgress bp;
     private int comboCounter = 0;
     private float _startTime;
+    private float roundTime = 30.0f;
 
     public static DanceManager Instance;
 
@@ -50,9 +51,9 @@ public class DanceManager : MonoBehaviour
     private IEnumerator UpdateTime()
     {
         var timePassed = 0;
-        while ((timePassed = (int)Mathf.Floor(Time.time - _startTime)) <= 30.0f)
+        while ((timePassed = (int)Mathf.Floor(Time.time - _startTime)) <= roundTime)
         {
-            timeText.text = String.Format("0 : {0:00}", (30 - timePassed)).ToString();
+            timeText.text = String.Format("0 : {0:00}", (roundTime - timePassed)).ToString();
             yield return null;
         }
         timeText.text = "0 : 00";
@@ -82,9 +83,9 @@ public class DanceManager : MonoBehaviour
             go.transform.localScale = Vector3.one;
         }
         var text = go.transform.Find("restart").GetComponent<Text>();
-        text.text = "restart in 3";
+        text.text = "restart in 3...";
         yield return new WaitForSeconds(1);
-        text.text = "restart in 2";
+        text.text = "restart in 2..";
         yield return new WaitForSeconds(1);
         text.text = "restart in 1";
         yield return new WaitForSeconds(1);

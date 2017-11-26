@@ -31,7 +31,7 @@ namespace DefaultNamespace.Dance.Animations
         private string GetRandomDanceAnimation()
         {
             string animationName = "move" + Random.Range(1, 3);
-            Debug.Log("ANIMATION NAME IS " + animationName);
+            //Debug.Log("ANIMATION NAME IS " + animationName);
             return animationName;
         }
     }

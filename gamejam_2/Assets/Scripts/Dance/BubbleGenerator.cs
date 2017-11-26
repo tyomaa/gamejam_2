@@ -13,11 +13,6 @@ public class BubbleGenerator : MonoBehaviour
 
     public void Init(IList<BubbleData> bubbles)
     {
-        foreach (var bubbleData in bubbles)
-        {
-            Debug.Log(bubbleData.time + " / " + bubbleData.x + "|" + bubbleData.y);
-        }
-
         _bubbles = new Stack<BubbleData>(bubbles.OrderByDescending(b => b.time));
         StartCoroutine(SpawnBubbles());
     }
@@ -32,7 +27,7 @@ public class BubbleGenerator : MonoBehaviour
             while (_bubbles.Count > 0 && _bubbles.Peek().time <= timeDiff)
             {
                 var bubble = _bubbles.Pop();
-                Debug.Log("instantiating " + bubble.type + " at " + bubble.time);
+                //Debug.Log("instantiating " + bubble.type + " at " + bubble.time);
                 var go = Instantiate(bubble);
                 switch (bubble.type)
                 {
