@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace game_jam.UI
 {
     public class CityScreen : BaseScreen
     {
         [SerializeField] private PvePoint[] _pvePoints;
-
+        [SerializeField] private InputField _ipAdressInputField;
         public void OnHomeClick()
         {
            GUIManager.Instance.ShowScreen<HomeScreen>(ScreenType.HOME);
@@ -38,6 +40,15 @@ namespace game_jam.UI
         public void OnPveClick(int pveId)
         {
             Debug.Log("On Pve Point " + pveId + " was clicked!");
+        }
+
+        public void OnInputEntered(string value)
+        {
+            if (string.IsNullOrEmpty(_ipAdressInputField.text))
+            {
+                return;
+            }
+            LobbyManager.Instance.SetIpAdress(_ipAdressInputField.text);
         }
     }
 }

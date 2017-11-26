@@ -42,5 +42,10 @@ namespace DefaultNamespace
                 ServerChangeScene(playScene);
             }
         }
+
+        public void SetIpAdress(string value)
+        {
+            networkAddress = value;
+        }
     }
 }
