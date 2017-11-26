@@ -1,4 +1,5 @@
-﻿using UnityEngine.Networking;
+﻿using UnityEngine;
+using UnityEngine.Networking;
 
 namespace DefaultNamespace
 {
@@ -29,7 +30,9 @@ namespace DefaultNamespace
 
         public override void OnLobbyServerPlayersReady()
         {
-            
+
+            Debug.LogError("### OnLobbyServerPlayersReady");
+
             bool allready = true;
             for(int i = 0; i < lobbySlots.Length; ++i)
             {

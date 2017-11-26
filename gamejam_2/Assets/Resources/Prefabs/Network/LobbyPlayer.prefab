@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4648172611304052}
   - component: {fileID: 114525708440597116}
-  - component: {fileID: 114477480714969508}
+  - component: {fileID: 114375359407462660}
   m_Layer: 0
-  m_Name: GamePlayer
+  m_Name: LobbyPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114477480714969508
+--- !u!114 &114375359407462660
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,10 +49,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218393681602632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f800348c778947e8b874763a1026454b, type: 3}
+  m_Script: {fileID: 11500000, guid: b28f4a7c7a8b4a989eec9a2095bfb008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  ShowLobbyGUI: 1
+  playerName: 
+  playerLevel: 
 --- !u!114 &114525708440597116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,21 +69,21 @@ MonoBehaviour:
   m_SceneId:
     m_Value: 0
   m_AssetId:
-    i0: 28
-    i1: 126
-    i2: 194
-    i3: 64
-    i4: 134
-    i5: 218
-    i6: 66
-    i7: 132
-    i8: 234
-    i9: 107
-    i10: 135
-    i11: 251
-    i12: 51
-    i13: 235
-    i14: 50
-    i15: 122
+    i0: 233
+    i1: 187
+    i2: 95
+    i3: 17
+    i4: 245
+    i5: 111
+    i6: 172
+    i7: 68
+    i8: 218
+    i9: 93
+    i10: 138
+    i11: 73
+    i12: 88
+    i13: 138
+    i14: 173
+    i15: 154
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1

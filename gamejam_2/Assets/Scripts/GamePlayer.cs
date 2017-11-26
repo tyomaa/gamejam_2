@@ -27,7 +27,10 @@ namespace DefaultNamespace
 
             score += resultPoints;
             CmdChangePoints(score);
-            RpcChangePoints(resultPoints);
+            if (isServer)
+            {
+                RpcChangePoints(resultPoints);
+            }
         }
 
         [Command]

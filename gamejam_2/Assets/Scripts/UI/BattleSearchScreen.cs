@@ -86,7 +86,7 @@ namespace game_jam.UI
         public void OnStartAsClient()
         {
             _started = true;
-            _started = false;
+            _host = false;
             LobbyManager.Instance.StartClient();
         }
     }

@@ -9,14 +9,25 @@ namespace game_jam.UI
         [SyncVar(hook = "OnMyName")] public string playerName = "";
 
         [SyncVar(hook = "OnMyLevel")] public string playerLevel = "";
-        
-        
+
+        public override void OnStartLocalPlayer()
+        {
+            base.OnStartLocalPlayer();
+
+            Debug.LogWarning("OnStartLocalPlayer");
+            if (isLocalPlayer)
+            {
+                Debug.LogWarning("CLIENT READY TO BEGIN MESSAGE");
+                SendReadyToBeginMessage();
+            }
+        }
+
         public override void OnClientEnterLobby()
         {
             base.OnClientEnterLobby();
 
-            if (LobbyManager.Instance != null) LobbyManager.Instance.OnPlayersNumberModified(1);
-            SendReadyToBeginMessage();
+            if (LobbyManager.Instance != null)
+                LobbyManager.Instance.OnPlayersNumberModified(1);
 
             if (GUIManager.Instance.GetSearchScreen() != null)
             {
@@ -55,7 +66,7 @@ namespace game_jam.UI
 
         void SetupOtherPlayer()
         {
-            OnClientReady(false);
+            //OnClientReady(false);
         }
 
         void SetupLocalPlayer()
@@ -65,7 +76,8 @@ namespace game_jam.UI
                 CmdNameChanged("Player" + (GUIManager.Instance.GetSearchScreen().GetPlayersCount()));
             //when OnClientEnterLobby is called, the loval PlayerController is not yet created, so we need to redo that here to disable
             //the add button if we reach maxLocalPlayer. We pass 0, as it was already counted on OnClientEnterLobby
-            if (LobbyManager.Instance != null) LobbyManager.Instance.OnPlayersNumberModified(0);
+            if (LobbyManager.Instance != null)
+                LobbyManager.Instance.OnPlayersNumberModified(0);
         }
 
         [Command]
