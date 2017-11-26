@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\Dance\SimpleBubble.cs" />
     <Compile Include="Assets\Scripts\Dance\SimpleMoveBubble.cs" />
     <Compile Include="Assets\Scripts\Dance\SwipeBubble.cs" />
-    <Compile Include="Assets\Scripts\DancerScore.cs" />
     <Compile Include="Assets\Scripts\FlyingText.cs" />
     <Compile Include="Assets\Scripts\GamePlayer.cs" />
     <Compile Include="Assets\Scripts\LobbyManager.cs" />
@@ -76,6 +75,7 @@
     <Compile Include="Assets\Scripts\UI\CityScreen.cs" />
     <Compile Include="Assets\Scripts\UI\GUIManager.cs" />
     <Compile Include="Assets\Scripts\UI\HomeScreen.cs" />
+    <Compile Include="Assets\Scripts\UI\LobbyPlayer.cs" />
     <Compile Include="Assets\Scripts\UI\MainScreen.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerInfo.cs" />
     <Compile Include="Assets\Scripts\UI\PvePoint.cs" />
