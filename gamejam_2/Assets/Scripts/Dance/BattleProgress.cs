@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class BattleProgress : MonoBehaviour
 {
     public Image progressImage;
+    public int diff;
 
     private void Awake()
     {
@@ -12,6 +13,7 @@ public class BattleProgress : MonoBehaviour
 
     public void SetDiff(int pointDiff)
     {
+        diff = pointDiff;
         if (pointDiff == 0)
         {
             progressImage.rectTransform.anchoredPosition = new Vector2(-500, 0);

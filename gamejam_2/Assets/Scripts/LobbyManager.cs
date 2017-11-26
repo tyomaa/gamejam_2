@@ -30,9 +30,6 @@ namespace DefaultNamespace
 
         public override void OnLobbyServerPlayersReady()
         {
-
-            Debug.LogError("### OnLobbyServerPlayersReady");
-
             bool allready = true;
             for(int i = 0; i < lobbySlots.Length; ++i)
             {
@@ -45,7 +42,5 @@ namespace DefaultNamespace
                 ServerChangeScene(playScene);
             }
         }
-        
-        
     }
 }

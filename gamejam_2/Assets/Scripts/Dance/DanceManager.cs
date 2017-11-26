@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -53,6 +54,45 @@ public class DanceManager : MonoBehaviour
             yield return null;
         }
         timeText.text = "0 : 00";
+        StartCoroutine(FinishLevel());
+    }
+
+    private IEnumerator FinishLevel()
+    {
+        yield return new WaitForSeconds(1);
+        GameObject go;
+        if (bp.diff > 0)
+        {
+            var o = Resources.Load<GameObject>("Prefabs/Win");
+            go = GameObject.Instantiate(o) as GameObject;
+            go.transform.SetParent(MainCanvas);
+            go.transform.localPosition = Vector3.zero;
+            go.GetRectTransform().anchoredPosition = Vector2.zero;
+            go.transform.localScale = Vector3.one;
+        }
+        else
+        {
+            var o = Resources.Load<GameObject>("Prefabs/Lose");
+            go = GameObject.Instantiate(o) as GameObject;
+            go.transform.SetParent(MainCanvas);
+            go.transform.localPosition = Vector3.zero;
+            go.GetRectTransform().anchoredPosition = Vector2.zero;
+            go.transform.localScale = Vector3.one;
+        }
+        var text = go.transform.Find("restart").GetComponent<Text>();
+        text.text = "restart in 3";
+        yield return new WaitForSeconds(1);
+        text.text = "restart in 2";
+        yield return new WaitForSeconds(1);
+        text.text = "restart in 1";
+        yield return new WaitForSeconds(1);
+
+        var infos = GameObject.FindObjectsOfType<GamePlayer>();
+        foreach (var i in infos)
+        {
+            if (i.isLocalPlayer && i.isServer)
+                LobbyManager.Instance.ServerChangeScene(LobbyManager.Instance.lobbyScene);
+        }
     }
 
     private void LoadLevel(int level)
@@ -96,22 +136,12 @@ public class DanceManager : MonoBehaviour
             else
                 ft.SetText("COMBO!");
         }
+
         var infos = GameObject.FindObjectsOfType<GamePlayer>();
-        //Debug.Log(infos.Length);
         foreach (var i in infos)
         {
-//            if (i.isLocalPlayer)
-            {
-                Debug.Log("adding " + result.points);
-//                i.score = i.score + result.points;
-                i.ChangeScore(result.points);
-            }
+            i.ChangeScore(result.points);
         }
-//        if (GamePlayer.Instance != null)
-//        {
-//             GamePlayer.Instance.DeltaPoints(result.points);
-//        }
-//       
     }
 
     public void OnMiss()

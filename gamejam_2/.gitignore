@@ -3,3 +3,4 @@
 /.vs
 *.csproj
 *.Editor.Plugins.csproj
+/obj
