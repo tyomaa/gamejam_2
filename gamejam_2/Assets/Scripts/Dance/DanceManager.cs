@@ -4,8 +4,7 @@ using System.Linq;
 using DefaultNamespace;
  using DefaultNamespace.Dance.Animations;
  using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
+ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DanceManager : MonoBehaviour
@@ -16,7 +15,7 @@ public class DanceManager : MonoBehaviour
     private BattleProgress bp;
     private int comboCounter = 0;
     private float _startTime;
-    private float roundTime = 30.0f;
+    private float roundTime = 60.0f;
 
     public static DanceManager Instance;
 
