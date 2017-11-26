@@ -9,6 +9,8 @@ namespace DefaultNamespace.Dance.Animations
         [SerializeField] private DancerAnimation _fishermaAnimation;
 
 
+        private float _lastRandomTime = 0;
+        private float _changeAnimationPeriod = 1.5f;
 
         public void MySuccessAnimation()
         {
@@ -28,6 +30,12 @@ namespace DefaultNamespace.Dance.Animations
         public void EnemyFailAnimation()
         {
             _fishermaAnimation.MissClick();
+        }
+
+
+        private void Update()
+        {
+           
         }
     }
 }
