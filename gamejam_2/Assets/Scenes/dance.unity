@@ -731,11 +731,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4195606857615774, guid: 938d2e43a684025458fa8e136088295d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 297.4
+      value: 291.57
       objectReference: {fileID: 0}
     - target: {fileID: 4195606857615774, guid: 938d2e43a684025458fa8e136088295d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 165.3
+      value: 162.6
       objectReference: {fileID: 0}
     - target: {fileID: 4195606857615774, guid: 938d2e43a684025458fa8e136088295d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1518,11 +1518,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4129428546427392, guid: c27c0112ce89e8844b5f5ac097f1b1d2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 378.75
+      value: 384.9
       objectReference: {fileID: 0}
     - target: {fileID: 4129428546427392, guid: c27c0112ce89e8844b5f5ac097f1b1d2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 165.5
+      value: 162.5
       objectReference: {fileID: 0}
     - target: {fileID: 4129428546427392, guid: c27c0112ce89e8844b5f5ac097f1b1d2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1736,6 +1736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressImage: {fileID: 378724389}
+  diff: 0
 --- !u!114 &1783579053
 MonoBehaviour:
   m_ObjectHideFlags: 0

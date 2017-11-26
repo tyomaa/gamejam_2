@@ -35,7 +35,14 @@ namespace DefaultNamespace.Dance.Animations
 
         private void Update()
         {
-           
+            if (_lastRandomTime > Time.time - _changeAnimationPeriod)
+            {
+                _lastRandomTime = Time.time;
+                if (Random.Range(0, 2) > 0)
+                {
+                       EnemySuccesAnimation();
+                }
+            }
         }
     }
 }
