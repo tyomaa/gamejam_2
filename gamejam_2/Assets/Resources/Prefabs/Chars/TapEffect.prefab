@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4958855575453946}
   - component: {fileID: 198137317557858762}
   - component: {fileID: 199467860827130270}
-  m_Layer: 0
+  - component: {fileID: 114754536743849088}
+  m_Layer: 5
   m_Name: TapEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +39,7 @@ GameObject:
   - component: {fileID: 4217135154884730}
   - component: {fileID: 198216382265816302}
   - component: {fileID: 199157983829824274}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ChildTafEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,6 +73,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &114754536743849088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1666254595317078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4352b3efbb24481498f1db92a67d2f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTimer: 0.5
 --- !u!198 &198137317557858762
 ParticleSystem:
   m_ObjectHideFlags: 1
