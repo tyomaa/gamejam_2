@@ -195,9 +195,11 @@ public class DanceManager : MonoBehaviour
         var otherInfo = infos.FirstOrDefault(i => !i.isLocalPlayer);
         if (bp != null)
         {
-            bp.SetDiff(
-                (myInfo == null ? 0 : myInfo.score) -
-                (otherInfo == null ? 0 : otherInfo.score));
+            var myScore = myInfo == null ? 0 : myInfo.score;
+            var enemyScore = otherInfo == null ? 0 : otherInfo.score;
+            bp.SetDiff(myScore - enemyScore);
+            bp.myPoints.text = myScore.ToString();
+            bp.enemyPoints.text = enemyScore.ToString();
         }
         _animations.UpdateRandom();
     }

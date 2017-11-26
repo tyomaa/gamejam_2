@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class BattleProgress : MonoBehaviour
 {
+    public Text myPoints;
+    public Text enemyPoints;
     public Image progressImage;
     public int diff;
 
