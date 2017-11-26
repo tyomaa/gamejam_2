@@ -1196,7 +1196,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: C-C-COMBO!!!
+  m_Text: CO-CO-COMBO!!!
 --- !u!222 &1461407901
 CanvasRenderer:
   m_ObjectHideFlags: 0
