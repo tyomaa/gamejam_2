@@ -1,6 +1,7 @@
 ﻿﻿using System;
 using System.Collections;
-using System.Linq;
+ using System.Collections.Generic;
+ using System.Linq;
 using DefaultNamespace;
  using DefaultNamespace.Dance.Animations;
  using UnityEngine;
@@ -110,14 +111,30 @@ public class DanceManager : MonoBehaviour
         SceneManager.LoadScene("dance");
     }
 
+    private Dictionary<ActionSuccessGrade, string> texts = new Dictionary<ActionSuccessGrade, string>
+    {
+        {ActionSuccessGrade.Perfect, "IMPRESSIVE!!!"},
+        {ActionSuccessGrade.Good, "SUPER!"},
+        {ActionSuccessGrade.Ok, "NICE"},
+        {ActionSuccessGrade.Fail, "OOPS!"},
+    };
+
     public void ProcessAction(ActionResult result, Vector2 pos)
     {
         FlyingText rft = FlyingText.Spawn(pos);
-        rft.SetText(result.successGrade.ToString() + "!");
+        var text = result.successGrade.ToString() + "!";
+        if (texts.ContainsKey(result.successGrade))
+            text = texts[result.successGrade];
+        rft.SetText(text);
 
-        FlyingText pft = FlyingText.Spawn(pos);
-        pft.Delay(0.15f);
-        pft.SetText("+" + result.points);
+        var delay = 0.15f;
+        if (result.points > 0)
+        {
+            FlyingText pft = FlyingText.Spawn(pos);
+            pft.Delay(delay);
+            delay += 0.15f;
+            pft.SetText("+" + result.points);
+        }
 
         if (result.successGrade < ActionSuccessGrade.Good)
         {
@@ -131,8 +148,8 @@ public class DanceManager : MonoBehaviour
 
         if (comboCounter >= 3)
         {
-            result.points = (int)(result.points * 1.2f) + (comboCounter - 3) * 2;
-            FlyingText ft = FlyingText.Spawn(pos, 0.3f);
+            result.points = (int)(result.points * 2f) + (comboCounter - 3) * 20;
+            FlyingText ft = FlyingText.Spawn(pos, delay);
             if (comboCounter > 3)
                 ft.SetText("COMBO x" + (comboCounter - 2) + "!!");
             else

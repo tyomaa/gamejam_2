@@ -35,7 +35,7 @@ public class SwipeBubble : BubbleBase, IDragHandler, IEndDragHandler
         var angle = Vector2.Angle(_dirvect, diff);
         var badOffset = diff.magnitude * Mathf.Sin(angle * Mathf.PI / 180);
         var dot = Vector2.Dot(diff, _dirvect);
-        if (diff.magnitude >= 200 && badOffset < 80 && dot > 0)
+        if (diff.magnitude >= 120 && badOffset < 80 && dot > 0)
         {
             DanceManager.Instance.ProcessAction(
                 new ActionResult
