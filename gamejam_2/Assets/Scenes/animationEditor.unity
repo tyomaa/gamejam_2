@@ -215,7 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1697690601595944, guid: 938d2e43a684025458fa8e136088295d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 938d2e43a684025458fa8e136088295d, type: 2}
@@ -491,6 +491,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -56.95311
       objectReference: {fileID: 0}
+    - target: {fileID: 1502673606558448, guid: c27c0112ce89e8844b5f5ac097f1b1d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c27c0112ce89e8844b5f5ac097f1b1d2, type: 2}
   m_IsPrefabParent: 0
@@ -734,8 +738,7 @@ MonoBehaviour:
   m_MaxPlayers: 2
   m_MaxPlayersPerConnection: 2
   m_MinPlayers: 2
-  m_LobbyPlayerPrefab: {fileID: 114442513894196264, guid: b5831998d789b774fb805343b698b420,
-    type: 2}
+  m_LobbyPlayerPrefab: {fileID: 0}
   m_GamePlayerPrefab: {fileID: 1218393681602632, guid: 1c7ec24086da4284ea6b87fb33eb327a,
     type: 2}
   m_LobbyScene: Main
