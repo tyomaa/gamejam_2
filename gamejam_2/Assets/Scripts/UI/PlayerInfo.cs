@@ -19,8 +19,10 @@ namespace game_jam.UI
         public void Init(string playerName, string level, LobbyPlayer lobbyPlayer)
         {
             Debug.LogWarning("PLayer Info init");
-            _playerName.text = playerName;
-            _level.text = level;
+            if (_playerName != null)
+                _playerName.text = playerName;
+            if (_level != null)
+                _level.text = level;
             _lobbyPlayer = lobbyPlayer;
 /*            if (_lobbyPlayer.isLocalPlayer)
             {

@@ -26,10 +26,13 @@ namespace DefaultNamespace
                 return;
 
             score += resultPoints;
-            CmdChangePoints(score);
+            if (isClient)
+            {
+                CmdChangePoints(score);
+            }
             if (isServer)
             {
-                RpcChangePoints(resultPoints);
+                RpcChangePoints(score);
             }
         }
 
@@ -42,7 +45,7 @@ namespace DefaultNamespace
         [ClientRpc]
         private void RpcChangePoints(int resultPoints)
         {
-            score += resultPoints;
+            score = resultPoints;
         }
     }
 }
