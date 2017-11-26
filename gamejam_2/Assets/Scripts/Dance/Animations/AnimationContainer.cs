@@ -10,7 +10,8 @@ namespace DefaultNamespace.Dance.Animations
 
 
         private float _lastRandomTime = 0;
-        private float _changeAnimationPeriod = 1.5f;
+        private readonly float _changeAnimationPeriod = 1.5f;
+        private bool needAnimate;
 
         public void MySuccessAnimation()
         {
@@ -33,14 +34,20 @@ namespace DefaultNamespace.Dance.Animations
         }
 
 
-        private void Update()
+        public void UpdateRandom()
         {
-            if (_lastRandomTime > Time.time - _changeAnimationPeriod)
+            if (_lastRandomTime < Time.time - _changeAnimationPeriod)
             {
                 _lastRandomTime = Time.time;
-                if (Random.Range(0, 2) > 0)
+
+                if (needAnimate)
                 {
-                       EnemySuccesAnimation();
+                    EnemySuccesAnimation();
+                    needAnimate = false;
+                }
+                else
+                {
+                    needAnimate = true;
                 }
             }
         }

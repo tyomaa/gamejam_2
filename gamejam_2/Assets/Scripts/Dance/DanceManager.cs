@@ -183,5 +183,6 @@ public class DanceManager : MonoBehaviour
                 (myInfo == null ? 0 : myInfo.score) -
                 (otherInfo == null ? 0 : otherInfo.score));
         }
+        _animations.UpdateRandom();
     }
 }
