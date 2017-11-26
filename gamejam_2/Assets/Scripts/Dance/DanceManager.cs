@@ -93,8 +93,12 @@ public class DanceManager : MonoBehaviour
         var infos = GameObject.FindObjectsOfType<GamePlayer>();
         foreach (var i in infos)
         {
+            i.ResetPoints();
             if (i.isLocalPlayer && i.isServer)
-                LobbyManager.Instance.ServerChangeScene(LobbyManager.Instance.lobbyScene);
+            {
+                LobbyManager.Instance.ServerChangeScene(LobbyManager.Instance.playScene);
+            }
+                
         }
     }
 

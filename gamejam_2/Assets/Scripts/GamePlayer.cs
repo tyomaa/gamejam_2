@@ -7,6 +7,12 @@ namespace DefaultNamespace
     {
         public int score = 0;
 
+
+        private void Awake()
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+
         public override void OnStartClient()
         {
             Debug.Log("OnStartClient");
@@ -46,6 +52,21 @@ namespace DefaultNamespace
         private void RpcChangePoints(int resultPoints)
         {
             score = resultPoints;
+        }
+
+        public void ResetPoints()
+        {
+            if (!isLocalPlayer)
+                return;
+            score = 0;
+            if (isClient)
+            {
+                CmdChangePoints(score);
+            }
+            if (isServer)
+            {
+                RpcChangePoints(score);
+            }
         }
     }
 }
