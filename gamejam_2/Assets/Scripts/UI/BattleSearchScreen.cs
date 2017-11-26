@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace game_jam.UI
 {
@@ -10,7 +11,7 @@ namespace game_jam.UI
         [SerializeField] private PlayerInfo _enemyInfo;
         [SerializeField] private RectTransform _searchInProgress;
         [SerializeField] private RectTransform _cancelButton;
-
+        [SerializeField] private InputField _ipAdressInputField;
         private List<LobbyPlayer> _players = new List<LobbyPlayer>{};
 
         private bool _started;
@@ -88,6 +89,15 @@ namespace game_jam.UI
             _started = true;
             _host = false;
             LobbyManager.Instance.StartClient();
+        }
+        
+        public void OnInputEntered(string value)
+        {
+            if (string.IsNullOrEmpty(_ipAdressInputField.text))
+            {
+                return;
+            }
+            LobbyManager.Instance.SetIpAdress(_ipAdressInputField.text);
         }
     }
 }
